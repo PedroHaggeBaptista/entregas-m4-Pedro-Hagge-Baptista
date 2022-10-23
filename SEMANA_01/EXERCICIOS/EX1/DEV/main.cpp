@@ -47,9 +47,13 @@
 // using namespace std;
 
 int converteSensor(int val, int min, int max) {
+	//Pego o valor - mínimo e multiplico por 100, para o %
     float conta1 = ((val - min) * 100);
+
+	//Pego o Máximo - Mínimo
     float conta2 = (max - min);
 
+	//Dívido o (Valor - Mínimo) divido pelo (Máximo - Mínimo)
     double resul = conta1 / conta2;
 
     return resul;
