@@ -70,19 +70,19 @@ void defineFrequency(int val) {
 
 //Armazena os decimais no vetor para tocar depois
 int armazenaNoVetor(int valor, int *vetor, int posicao, int maxVetor) {
-    Serial.println("Teste");
-    //Esse if têm como intuito fazer com que seja impossível estrapolar os espaços alocados na memória para o vetor em questão
-    if ((posicao + 1) < maxVetor) {
-        //Seto nessa posição o valor passado do "sensor"
-        vetor[posicao] = valor;
-        //Adiciono mais 1 na posição para essa ser então a nova "ultima posição", que será retornada para a função "Dirige()"
-        int ultimaPosicao = posicao + 1;
+  Serial.println("Teste");
+	//Esse if têm como intuito fazer com que seja impossível estrapolar os espaços alocados na memória para o vetor em questão
+	if ((posicao + 1) < maxVetor) {
+		//Seto nessa posição o valor passado do "sensor"
+		vetor[posicao] = valor;
+		//Adiciono mais 1 na posição para essa ser então a nova "ultima posição", que será retornada para a função "Dirige()"
+		int ultimaPosicao = posicao + 1;
     //Retorno a última posição para que possa haver continuidade caso essa função seja chamada novamente
-        return ultimaPosicao;
-    } else {
+		return ultimaPosicao;
+	} else {
     //Como não há mais espaços no vetor retorno a própria posição para travar a adição com essa função
-        return posicao;
-    }
+		return posicao;
+	}
 }
 
 //Função para ligar os leds
@@ -172,6 +172,10 @@ void loop() {
       vetorBinariosRepeat[1] = 0;
       vetorBinariosRepeat[2] = 0;
       vetorBinariosRepeat[3] = 0;
+    }
+
+    for (int i = 0; i <= (maxVetor - 1); i++) {
+      vetor[i] = 0;
     }
   }
   delay(50);
