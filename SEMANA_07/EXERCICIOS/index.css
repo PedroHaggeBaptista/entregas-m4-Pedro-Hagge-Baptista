@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+.titleHome {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    margin-top: 1rem;
+    font-family: 'Nunito', sans-serif;
+}
+
+.bodyContentBtns {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    gap: 5rem;
+    width: 100%;
+}
+
+.btnHome {
+    width: 15rem;
+    height: 7rem;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    font-family: 'Nunito', sans-serif;
+    transition: 1s;
+}
+
+.btnHome:hover {
+    scale: 1.1;
+}
+
+#jogador1 {
+    background-color: rgb(151, 28, 28);
+    color: white;
+}
+
+#jogador2 {
+    background-color: rgb(28, 28, 153);
+    color: white;
+}
+
+.divText {
+    width: 90%;
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.instructionText {
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: 'Nunito', sans-serif;
+}
+
+@media screen and (max-width: 600px) {
+    .titleHome {
+        font-size: 2rem;
+    } 
+}
