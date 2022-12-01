@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogar</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id = 'headerJogar'>
+        <h1 id = 'titleJogador'>Jogador 1</h1>
+    </div>
+    <div id = 'bodyJogar'>
+        <div class = 'textJogar'>Assim como no jogo tradicional, aqui você deve selecionar qual a opção você quer. Se quer pedra, papel ou tesoura</div>
+    </div>
+    <div class="selectionJogar">
+        <button onclick="sendResult('Pedra')" class="btnSelection">Pedra</button>
+        <button onclick="sendResult('Papel')" class="btnSelection">Papel</button>
+        <button onclick="sendResult('Tesoura')" class="btnSelection">Tesoura</button>
+    </div>
+</body>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="./jogar.js"></script>
+</html>
