@@ -35,37 +35,19 @@ class MostradorLCD {
     //Para cada método, basta passar o texto que deseja exibir no LCD e cada um exibe de uma forma diferente
     MostradorLCD (LiquidCrystal_I2C *lcd){
       lcd_i2c = lcd;     
-      lcd_i2c->init(); // initialize the lcd
+      lcd_i2c->init(); // Inicialização do LCD
       lcd_i2c->backlight();
-
     };
     void mostraL1(char *texto){
       //Serial.printf("L1: %s\n",texto);
       lcd_i2c->setCursor(0, 0); 
       lcd_i2c->printf(texto);
     };
-    void mostraL1Dest(char *texto){
-     // Serial.printf("L1 Destino: %s\n",texto);
-      lcd_i2c->setCursor(0, 0); 
-      lcd_i2c->printf("->%s ",texto);
-    };
-    void mostraL1IP(char *ip){
-   //   Serial.printf("IP: %s\n",ip);
-      lcd_i2c->setCursor(0, 0); 
-      lcd_i2c->printf("IP:%s",ip);
-    };
+
     void mostraL1IP(String ip){
    //   Serial.printf("IP: %s\n",ip);
       lcd_i2c->setCursor(0, 0); 
       lcd_i2c->printf("IP:%s",ip);
-    };
-    void mostraL2(char *texto){
-      lcd_i2c->setCursor(0, 1); 
-      lcd_i2c->printf(texto);
-    };
-    void mostraL2Msg(char *texto){
-      lcd_i2c->setCursor(0, 1); 
-      lcd_i2c->printf("Msg: %s",texto);
     };
 
     //Método para voltar o LCD para a tela inicial (Aguardando jogadores)

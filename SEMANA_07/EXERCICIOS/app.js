@@ -4,7 +4,7 @@ const cors = require('cors')
 const axios = require('axios')
 
 //IP recebido pelo ESP32 da rede local
-const ip = '192.168.15.23'
+const ip = '192.168.15.26'
 
 
 const app = express()
